@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>CatVet - Clínica Veterinária para Gatos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: rgb(62, 184, 163);
+            padding: 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: yellow;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        article {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        aside {
+            float: right;
+            width: 30%;
+            background-color: rgb(62, 184, 163);
+            padding: 20px;
+            color: white;
+        }
+
+        time {
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #9b9271;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CatVet - Clínica Veterinária para Gatos</h1>
+        <nav>
+            <ul>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#exames">Exames</a></li>
+                <li><a href="#consultas">Consultas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article id="especialidades">
+        <h2>Especialidades</h2>
+        <section>
+            <h3>Oncologia Felina</h3>
+            <p>Oferecemos tratamento especializado para gatos com diagnóstico de câncer.</p>
+        </section>
+        <section>
+            <h3>Dermatologia Felina</h3>
+            <p>Tratamos condições dermatológicas comuns em gatos, como alergias e infecções de pele.</p>
+        </section>
+    </article>
+
+    <aside>
+        <h2>Horário de Atendimento</h2>
+        <time>Segunda a Sexta: 8h - 19h</time><br>
+        <time>Sábado: 9h - 14h</time>
+    </aside>
+
+    <article id="exames">
+        <h2>Exames</h2>
+        <section>
+            <h3>Hemograma Completo</h3>
+            <img src="960x720-3-4.jpg" alt="Hemograma Completo">
+        </section>
+        <section>
+            <h3>Raio-X</h3>
+            <img src="111031125051_raioxgato.jpg" alt="Raio-X">
+        </section>
+    </article>
+
+    <article id="consultas">
+        <h2>Consultas</h2>
+        <section>
+            <h3>Marque sua Consulta</h3>
+            <form>
+                <label for="data">Data:</label>
+                <input type="date" id="data">
+                <br>
+                <input type="submit" value="Agendar">
+            </form>
+        </section>
+    </article>
+
+    <article id="contato">
+        <h2>Contato</h2>
+        <section>
+            <h3>Nosso Endereço</h3>
+            <p>Rua dos Gatos, 123 - Bairro Feliz</p>
+        </section>
+        <section>
+            <h3>Telefone</h3>
+            <p>(11) 1234-5678</p>
+        </section>
+    </article>
+
+    <footer>
+        <p>&copy; 2023 CatVet - O veterinário do seu gato</p>
+    </footer>
+</body>
+</html>
