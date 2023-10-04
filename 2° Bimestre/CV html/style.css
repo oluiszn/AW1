@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    color: white;
+}
+
+h1 {
+    padding: 5px;
+    background-color: #a1c9ec;
+    text-align: center;
+}
+
+h2 {
+    background-color: #a1c9ec;
+    color: white;
+    border-bottom: solid 3px white;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 700px;
+}
