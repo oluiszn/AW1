@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Temática - Livros Sombrios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1c1c1c;
+            color: #ffffff;
+        }
+
+        .bg-gradient {
+            background: linear-gradient(to right, #4b0082, #2e0854, #8a2be2, #8b008b);
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.6);
+            width: 100vw;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 1180px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 180px;
+            padding: 8px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            margin-left: 30px;
+        }
+
+        nav a:hover {
+            color: #FF69B4;
+        }
+
+        nav .btn-entrar {
+            color: #FF69B4;
+            border: 1px solid #FF69B4;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        nav .btn-entrar:hover {
+            background: #FF69B4;
+            color: #ffffff;
+            transition: 0.3s;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .banner h1 {
+            color: #800080;
+            font-size: 100px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+
+        .banner-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-buttons a {
+            text-decoration: none;
+            background: #800080;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-left: 5px;
+            padding: 13px;
+            font-size: 20px;
+            border-radius: 30px;
+        }
+
+        .banner-buttons a:hover {
+            background: #6a0dad;
+            transition: 0.5s;
+        }
+
+        #servicos {
+            width: 100vw;
+            background: #1c1c1c;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container-servicos {
+            width: 1150px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .grid-books {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .grid-books img {
+            width: 120px;
+            border-radius: 10px;
+        }
+
+        .servicos-text {
+            width: 580px;
+        }
+
+        .servicos-text h2,
+        .servicos-text h3 {
+            color: #800080;
+            padding-left: 10px;
+        }
+
+        .servicos-text p {
+            padding: 10px;
+            line-height: 1.5;
+        }
+
+        #recursos {
+            padding: 20px;
+        }
+
+        .box-recursos {
+            padding: 20px;
+        }
+
+        .recursos-text {
+            width: 350px;
+        }
+
+        .recursos-text h2 {
+            color: #800080;
+            padding-bottom: 10px;
+        }
+
+        .recursos-text h3 {
+            color: #200077;
+            font-size: 2em;
+        }
+
+        .recursos-text p {
+            padding-top: 10px;
+            padding-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .container-books {
+            width: 730px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .books {
+            display: flex;
+            align-items: center;
+        }
+
+        .books img {
+            width: 700px;
+        }
+
+        .footer {
+            background-color: #000;
+            width: 100vw;
+        }
+
+        .box-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 8px;
+        }
+
+        .logo-items img {
+            width: 100px;
+        }
+
+        .items h4 {
+            color: #21251D;
+            font-weight: 600;
+            font-size: 0.8em;
+            margin-bottom: 8px;
+        }
+
+        .items ul {
+            list-style: none;
+        }
+
+        .items a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 0.8em;
+            padding: 5px;
+        }
+
+        .items a:hover {
+            text-decoration: underline;
+        }
+
+        .social-media ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-media i {
+            margin-left: 40px;
+            margin-top: 40px;
+            padding: 5px;
+            color: #fff;
+        }
+
+        .social-media i:hover {
+            background-color: #111;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="bg-gradient">
+        <header class="header">
+            <nav class="container">
+                <div class="logo">
+                    <img src="./images/logo-sinete.jpg" alt="">
+                </div>
+                <ul>
+                    <li><a href="#">Página Principal</a></li>
+                    <li><a href="#">Livros</a></li>
+                    <li><a href="#">Autores</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#" class="btn-entrar">Entrar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="banner">
+            <h1>Livros Sombrios</h1>
+            <div class="banner-buttons">
+                <a href="">Novidades</a>
+                <a href="">Mais Vendidos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="box">
+            <div class="container-servicos">
+                <div class="grid-books">
+                    <img src="./images/livro-feito.png" alt="">
+                    <img src="./images/livro-privilegios.png" alt="">
+                    <img src="./images/livro-feito.png" alt="">
+                    <img src="./images/livro-privilegios.png" alt="">
+                    <img src="./images/livro-feito.png" alt="">
+                    <img src="./images/livro-privilegios.png" alt="">
+                </div>
+
+                <div class="servicos-text">
+                    <h2>Destaques</h2>
+                    <h3>As espirais de outubro</h3>
+                    <p>Uma velha escritora escreve um diário íntimo durante treze dias de outubro. Seu escrito trabalha
+                        com dois registros: o primeiro é memorialístico. O segundo, denominado “Na cidade” trabalha com
+                        a memória imediata, ...</p>
+                    <h3>O que devíamos ter feito</h3>
+                    <p>“casa é algo maior do que as pessoas que moram ali dentro, é maior que a própria casa.”</p>
+                    <h3>O privilégio dos mortos</h3>
+                    <p>Em “O privilégio dos mortos”, o narrador viaja de volta à cidade natal, Tejuco, no interior do
+                        estado de Minas Gerais, para visitar o túmulo de seu melhor amigo ...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos" class="bg-gradient">
+        <div class="box-recursos box">
+            <div class="container">
+                <div class="recursos-text">
+                    <h2>Aprenda Mais</h2>
+                    <h3>Duolingo</h3>
+                    <p>Aprenda mais de 30 idiomas online em lições curtinhas que tem ...</p>
+                    <h3>Acontece nos livros</h3>
+                    <p>A casa da literatura contemporânea</p>
+                    <h3>Dicionaria de Sinonimos</h3>
+                    <p>30 mil sinônimos de palavras e expressões da língua portuguesa</p>
+                </div>
+
+                <div class="container-books">
+                    <div class="books">
+                        <img src="./images/colecao-livros.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="box-footer">
+            <div class="container">
+                <div class="logo-items">
+                    <img src="./images/logo-sinete.jpg" alt="">
+                </div>
+                <div class="items">
+                    <h4>PRINCIPAL</h4>
+                    <ul>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Contato</a></li>
+                        <li><a href="">Endereço</a></li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <h4>GRUPOS</h4>
+                    <ul>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Contato</a></li>
+                        <li><a href="">Endereço</a></li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <h4>LINKS ÚTEIS</h4>
+                    <ul>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Contato</a></li>
+                        <li><a href="">Endereço</a></li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
