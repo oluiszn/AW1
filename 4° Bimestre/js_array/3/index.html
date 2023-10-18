@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz Dinâmica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        input, button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Matriz Dinâmica</h1>
+        <input type="number" id="numRows" placeholder="Número de Linhas">
+        <input type="number" id="numCols" placeholder="Número de Colunas">
+        <button onclick="gerarMatriz()">Gerar Matriz</button>
+        <button onclick="preencherMatriz()">Preencher Matriz</button>
+        <div id="matrizOutput"></div>
+    </div>
+    <script>
+        function gerarMatriz() {
+            let numRows = document.getElementById('numRows').value;
+            let numCols = document.getElementById('numCols').value;
+            let matriz = "<table>";
+            for (let i = 0; i < numRows; i++) {
+                matriz += "<tr>";
+                for (let j = 0; j < numCols; j++) {
+                    matriz += "<td></td>";
+                }
+                matriz += "</tr>";
+            }
+            matriz += "</table>";
+            document.getElementById('matrizOutput').innerHTML = matriz;
+        }
+
+        function preencherMatriz() {
+            let table = document.querySelector('table');
+            if (table) {
+                let rows = table.getElementsByTagName('tr');
+                for (let i = 0; i < rows.length; i++) {
+                    let cols = rows[i].getElementsByTagName('td');
+                    for (let j = 0; j < cols.length; j++) {
+                        cols[j].textContent = Math.floor(Math.random() * 100) + 1;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

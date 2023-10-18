@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificadores dos Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #resultado {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Verificadores dos Números</h1>
+
+    <label for="numero1">Número 1:</label>
+    <input type="text" id="numero1">
+
+    <label for="numero2">Número 2:</label>
+    <input type="text" id="numero2">
+
+    <label for="numero3">Número 3:</label>
+    <input type="text" id="numero3">
+
+    <button onclick="encontrarMaiorMenor()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function encontrarMaiorMenor() {
+            var numero1 = parseFloat(document.getElementById("numero1").value);
+            var numero2 = parseFloat(document.getElementById("numero2").value);
+            var numero3 = parseFloat(document.getElementById("numero3").value);
+
+            if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+                document.getElementById("resultado").textContent = "Por favor, digite números válidos.";
+                return;
+            }
+
+            var numeros = [numero1, numero2, numero3];
+            var maior = Math.max(...numeros);
+            var menor = Math.min(...numeros);
+
+            document.getElementById("resultado").textContent = "O maior número é: " + maior + ". O menor número é: " + menor + ".";
+        }
+    </script>
+
+</body>
+</html>

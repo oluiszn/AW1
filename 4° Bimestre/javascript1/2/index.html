@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenador de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        #valorB {
+            width: 145px;
+        }
+
+        button {
+            padding: 8px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #resultado {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ordenador de Números</h1>
+
+    <label for="valorA">Valor A:</label>
+    <input type="text" id="valorA">
+
+    <label for="valorB">Valor B:</label>
+    <input type="text" id="valorB">
+
+    <button onclick="ordenarNumeros()">Ordenar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function ordenarNumeros() {
+            var valorA = parseFloat(document.getElementById("valorA").value);
+            var valorB = parseFloat(document.getElementById("valorB").value);
+
+            if (isNaN(valorA) || isNaN(valorB)) {
+                document.getElementById("resultado").textContent = "Por favor, digite números válidos.";
+            } else {
+                var ordenados = [valorA, valorB].sort(function(a, b) {
+                    return a - b;
+                });
+
+                document.getElementById("resultado").textContent = ordenados.join(" ");
+            }
+        }
+    </script>
+
+</body>
+</html>

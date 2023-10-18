@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Números Pares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Soma dos Números Pares</h1>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let numeros = [];
+
+            // Preencher o array com números aleatórios
+            for (let i = 0; i < 20; i++) {
+                numeros.push(Math.floor(Math.random() * 100) + 1);
+            }
+
+            // Calcular a soma dos números pares
+            let somaPares = numeros.reduce((soma, numero) => {
+                if (numero % 2 === 0) {
+                    return soma + numero;
+                }
+                return soma;
+            }, 0);
+
+            // Exibir o resultado no HTML
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `A soma dos números pares é: ${somaPares}`;
+        });
+    </script>
+</body>
+</html>

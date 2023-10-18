@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da Semana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #resultado {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dia da Semana</h1>
+
+    <label for="numero">Digite um número (1 a 7):</label>
+    <input type="text" id="numero">
+
+    <button onclick="determinarDiaSemana()">Determinar Dia</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function determinarDiaSemana() {
+            var numero = parseInt(document.getElementById("numero").value);
+
+            if (isNaN(numero) || numero < 1 || numero > 7) {
+                document.getElementById("resultado").textContent = "Por favor, digite um número entre 1 e 7.";
+                return;
+            }
+
+            var diasDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+
+            document.getElementById("resultado").textContent = "O dia correspondente é: " + diasDaSemana[numero - 1] + ".";
+        }
+    </script>
+
+</body>
+</html>

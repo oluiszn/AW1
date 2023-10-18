@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área de Circunferência</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #resultado {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculadora de Área de Circunferência</h1>
+
+    <label for="raio">Informe o raio da circunferência:</label>
+    <input type="text" id="raio">
+
+    <button onclick="calcularArea()">Calcular Área</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularArea() {
+            var raio = parseFloat(document.getElementById("raio").value);
+
+            if (isNaN(raio) || raio <= 0) {
+                document.getElementById("resultado").textContent = "Por favor, digite um valor de raio válido.";
+                return;
+            }
+
+            var area = Math.PI * Math.pow(raio, 2);
+
+            document.getElementById("resultado").textContent = "A área da circunferência é: " + area.toFixed(2) + " unidades quadradas.";
+        }
+    </script>
+
+</body>
+</html>
